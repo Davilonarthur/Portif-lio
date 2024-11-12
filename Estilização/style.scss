@@ -1,0 +1,187 @@
+//mixin
+@mixin Flexbox{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+//Fontes 
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Gowun+Batang:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Gowun+Batang:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Geist+Mono:wght@100..900&family=Gowun+Batang:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+
+//Keyframe
+@keyframes Flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 20px;
+    }
+}
+
+//resete 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+//Header
+header{
+    font-family: "Geist Mono", serif;
+    border: solid 2px black;
+    height: 5rem;
+    width: 100%;
+    @include Flexbox();
+    background-image: linear-gradient(46Deg, #111827, #020409);
+}
+.Div_logo{
+   position: relative;
+   right: 6rem;
+}
+.Logo{
+    font-family: "EB Garamond", serif;
+    text-decoration: none;
+    font-size: 32px;
+    color: rgb(203, 203, 194);
+    display: inline-block;
+}
+.Logo:hover{
+    transform: scale(1.05);
+    color: white;
+}
+.Div_lista{
+    position: relative;
+    left: 22rem;
+    ul{
+        @include Flexbox();
+        gap: 35px;
+    }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            font-size: 15px;
+            color: rgb(203, 203, 194);
+            display: inline-block;
+        }
+        
+    }
+    a:hover{
+        transform: scale(1.05);
+        color: rgb(255, 255, 255);
+    }
+}
+.Div_Btn{
+    position: relative;
+    left: 6.8rem;
+    button{
+        height: 28px;
+        width: 100px;
+        border-radius: 9px;
+        background-image: linear-gradient(46Deg, #bac9e8, #7b9ef5);
+        font-weight: 500;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: "Geist Mono", serif;
+    }
+    button:hover {
+        color: rgb(255, 244, 244);
+        transform: scale(1.1);
+    }
+}
+//Seção de Apresentação
+.Secao_Apresentacao{
+    @include Flexbox();
+    display:flex;
+    flex-direction: column;
+    background-image: url(../imagens/Imagem\ de\ fundo\ portifólio.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+    img{
+        width: 35px;
+    }
+}
+.Bloco_apoio_apresentacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 75vh;
+}
+.apresentacao_bloco{
+    position: relative;
+    width: 65vh;
+}
+.Traço_efeito1{
+    border: solid 1px rgb(255, 255, 255);
+    width: 35px;
+    position: relative;  
+    left: 45px;
+    bottom: 15px;
+}
+.Traço_efeito2{
+    border: solid 1px rgb(255, 251, 251);
+    width: 35px;
+    position: relative;
+    left: 395px;
+    bottom: 15px;
+    
+}
+.Texto_apresentacao{
+    font-family: "EB Garamond", serif;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+.RedesSociais_apresentacao{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.Frase_DescaParaMaisInformações{
+    display: flex;
+    justify-content: center;
+    color: wheat;
+    font-family: "Geist Mono", serif;
+    position: relative;
+    animation: Flutuar 2s ease-in-out infinite alternate;
+}
+//segunda Seção Tecnologias e mais sobre serviços
+.Mais_sobre_meus_servicos_e_tecnologias{
+    background-image: linear-gradient(46Deg, #111827, #061029);
+    height: 50rem;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.CaixaPrincipalMaisserviços{
+    border: solid 2px white;
+    height: 100vh;
+    width: 190vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.MaisSobreMeusServicos_tecnologias{
+    border: solid 2px black;
+}
+.Div_fotoDePerfil{
+    border: solid 2px wheat;
+    img{
+        width: 250px;
+        height: 250px;
+    }
+}
+.Tecnologias{
+    img{
+        height: 85px;
+    }
+}
